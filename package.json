@@ -1,0 +1,55 @@
+{
+  "name": "fittany-ui",
+  "version": "0.0.0",
+  "description": "Description for Fittany_ui",
+  "json_src_path": "app/",
+  "js_src_path": "app/",
+  "js_bundle_path": "temp/",
+  "css_src_path": "content/css/",
+  "sass_src_path": "scss/",
+  "image_path": "content/images/",
+  "fonts_path": "content/fonts/",
+  "node_modules": "node_modules/",
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-loading-bar": "0.9.0",
+    "angular-resource": "1.5.8",
+    "angular-ui-bootstrap": "2.5.0",
+    "angular-ui-router": "0.3.1",
+    "bootstrap": "3.3.7",
+    "bootstrap-ui-datetime-picker": "2.4.3",
+    "jquery": "3.1.0"
+    
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jasmine": "^2.0.1",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-html-imports": "^0.1.0",
+    "grunt-processhtml": "^0.3.13",
+    "grunt-strip-code": "^1.0.4",
+    "sass-lint": "^1.5.0"
+  },
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": "3.1.0"
+      }
+    }
+  },
+  "engines": {
+    "node": "^4.3"
+  },
+  "scripts": {
+    "run": "grunt run"
+  }
+}
