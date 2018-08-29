@@ -44,7 +44,7 @@ angular.module('fittanyUiApp')
                 $scope.palum = "";
                 $scope.alumActive = "";
                 $scope.npalum = "";
-                $scope.noalumActive = ""
+                $scope.noalumActive = "";
         };
 
         $scope.submitFittanySignup = function(user){
