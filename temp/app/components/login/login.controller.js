@@ -4,11 +4,12 @@
 angular.module('fittanyUiApp')
  
 .controller('LoginController',
-    ['$scope', 'AuthService',
-    function ($scope, AuthService) {
+    ['$scope', 'AuthService','$state',
+    function ($scope, AuthService,$state) {
         console.log("This is login controller");
-        $scope.login = function () {
-          
+        $scope.state = $state;
+        console.log($scope.state.current.name);
+        $scope.login = function () {          
             //code for spinner comes here
 
             AuthService.Login($scope.email,$scope.password,function(response){
@@ -21,5 +22,7 @@ angular.module('fittanyUiApp')
            
         };
     }]);
+
+
 
 })();

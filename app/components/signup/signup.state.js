@@ -7,8 +7,7 @@ angular.module('fittanyUiApp')
                 .state('signup', {
                     url: '/signup',
                     templateUrl: 'app/components/signup/signup.html',
-                    controller: 'SignupController',
-                    controllerAs:'vm'
+                    controller: 'SignupController'
 
                 });
 

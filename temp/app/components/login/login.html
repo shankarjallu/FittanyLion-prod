@@ -19,10 +19,10 @@
 				</div>
 				<div class="row button-group">
 					<div class="col-xs-6 col-sm-6">
-						<button class="btn btn-default btn-lg custom-buttom"><a href="#/signup">Signup</a></button>
+						<button ng-class="{active: state.current.name === 'signup'}" ui-sref="signup" class="btn btn-default btn-lg custom-buttom">Sign Up</button>
 					</div>
 					<div class="col-xs-6 col-sm-6">
-						<button class="btn btn-default btn-lg custom-buttom">Log in</button>
+						<button ng-class="{active: state.current.name === 'login'}"  class="btn btn-default btn-lg custom-buttom">Log in</button>
 					</div>
 					
 				</div>

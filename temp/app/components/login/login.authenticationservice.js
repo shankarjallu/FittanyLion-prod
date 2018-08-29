@@ -21,7 +21,7 @@ angular.module('fittanyUiApp')
         var authdata = Base64.encode(email + ':' + password);
         console.log(authdata);
         
-        var mockUrl = './app/components/login/login.json';
+        var mockUrl = 'app/components/login/login.json';
       
         $http({
             method: 'GET',
