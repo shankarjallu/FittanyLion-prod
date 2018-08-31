@@ -4,9 +4,10 @@
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-family: open-sans !important;
-  padding-left: 0 !important; }
+  padding-left: 0 !important;
+  color: #000 !important; }
 
 .custom-form-group {
   margin-bottom: 20px !important; }
@@ -27,8 +28,12 @@
 
 .highmark-label {
   font-size: 20px !important;
-  color: #808080d4 !important;
-  font-weight: 100 !important; }
+  color: #7d7575fa !important;
+  font-weight: 400 !important; }
+
+.text-muted {
+  font-size: 15px !important;
+  color: #b5b0b0; }
 
 .ui-button {
   border: 1px solid #c5c5c5 !important;
@@ -76,14 +81,16 @@
 
 .input-checkbox {
   border: 1px solid gray;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 0px 0px 0px;
   border-radius: 30px;
   color: #808080e3;
-  height: 37px;
-  cursor: pointer; }
+  height: 35px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center; }
 
 .inputcheckboxactive {
-  border: 1px solid #000;
+  border: 2px solid #000;
   color: #000; }
 
 .input-checkbox input {
@@ -96,7 +103,7 @@
 
 .radio-circle {
   content: '\2022';
-  margin-left: 100px;
+  margin-left: 120px;
   margin-top: -37px;
   color: gray;
   font-size: 40px;
@@ -112,11 +119,23 @@
     margin-left: -15px !important; }
 
   .custom-buttom {
-    padding: 14px 22px !important;
-    font-size: 23px !important;
+    padding: 10px 1px !important;
+    font-size: 20px !important;
     border-radius: 75px !important;
     border: 3px solid #000 !important;
-    width: 115px; } }
+    width: 115px; }
+
+  .highmark-label {
+    font-size: 12px !important; }
+
+  .terms-condition {
+    position: relative;
+    margin-left: -20px;
+    margin-top: 10px;
+    font-size: 15px !important; } }
+.checkboxactive {
+  border: 2px solid #696363fa !important; }
+
 .container, .row {
   margin-left: 0px !important;
   margin-right: 0px !important; }

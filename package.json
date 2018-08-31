@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Description for Fittany_ui",
   "json_src_path": "app/",
+  "fonts_src_path": "content/fonts/",
   "js_src_path": "app/",
   "js_bundle_path": "temp/",
   "css_src_path": "content/css/",
