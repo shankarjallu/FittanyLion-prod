@@ -14,4 +14,9 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none !important;
 }
 
+.collapse.in{
+	transition: margin-left 2s;
+	margin-left:-15px !important;
+}
+
 

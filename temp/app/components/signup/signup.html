@@ -39,13 +39,13 @@
 				<p class="text-muted">This fitness challenge program is available only for residents on PA.</p>
 				<div class="form-group">
 					<label for="age" class="highmark-label">How old are you? </label><br>
-					<label for="radio-1" class="input-checkbox" style="width: 115px" ng-class="below25">25 and below
+					<label for="radio-1" class="input-checkbox" ng-class="below25">25 and below
 						<input type="radio" name="age" id="radio-1" ng-model="user.age" value="25below"  ng-click="radioAge()" required>
 					</label>
-					<label for="radio-2" class="input-checkbox" style="width: 80px" ng-class="above25">26-64
+					<label for="radio-2" class="input-checkbox" ng-class="above25">26-64
 						<input type="radio" name="age" ng-model="user.age" id="radio-2" value="2564" ng-click="radioAge()" required>
 					</label>
-					<label for="radio-3" class="input-checkbox" style="width: 113px" ng-class="above65">65 and above
+					<label for="radio-3" class="input-checkbox" ng-class="above65">65 and above
 						<input type="radio" name="age" ng-model="user.age" id="radio-3" value="65above" ng-click="radioAge()" required>
 					</label>
 					<span style="color:red" ng-show="(fittanySignupForm.age.$dirty && fittanySignupForm.age.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.age.$invalid)">
@@ -56,13 +56,13 @@
 				<div class="form-group" id="pennalum">
 					<label  class="highmark-label">Are you PennState University's alumni? </label><br>
 					
-					<label for="radio-4" class="input-checkbox" style="width: 150px" ng-class="palum">Yes
+					<label for="radio-4" class="input-checkbox" style="width:155px;text-align:left;padding-left:10px;" ng-class="palum">Yes
 						<input type="radio" name="pennalum" ng-model="user.pennalum" id="radio-4" value="pennAlum" ng-click="pennAlum()" required>
 						<span class="radio-circle" ng-class="alumActive">&#8226;</span>
 					</label>
 					
 					
-					<label for="radio-5" class="input-checkbox" style="width: 150px" ng-class="npalum">No
+					<label for="radio-5" class="input-checkbox" style="width: 155px;text-align:left;padding-left: 10px;" ng-class="npalum">No
 						<input type="radio" name="pennalum" ng-model="user.pennalum" id="radio-5" value="noalum" ng-click="pennAlum()" required>
 						<span class="radio-circle" ng-class="noalumActive">&#8226;</span>
 					</label>
@@ -101,7 +101,7 @@
 				</div>
 				<div class="row button-group">
 					<div class="col-xs-12 col-sm-12">
-						<button ng-class="{active: state.current.name === 'signup'}" class="btn btn-default btn-lg custom-buttom" style="margin-left:25%;">Sign Up</button>
+						<button ng-class="{active: state.current.name === 'signup'}" class="btn btn-default btn-lg custom-buttom" style="margin-left:25%;width:160px;">Sign Up</button>
 					</div>
 					
 				</div>

@@ -17,7 +17,8 @@ module.exports = function(grunt) {
                 sass:'<%=pkg.sass_src_path%>main.scss',
                 html:'<%= pkg.js_src_path%>**/*.html',
                 node_modules: '<%= pkg.node_modules%>',
-                images: '<%= pkg.image_path%>**/*.*'
+                images: '<%= pkg.image_path%>**/*.*',
+                fonts: '<%= pkg.fonts_src_path%>**/*.*',
             },
             dest: {
                 jsconcat: '<%= pkg.js_bundle_path %>highmark-desktop-base.js',
@@ -103,6 +104,7 @@ module.exports = function(grunt) {
                     {expand: true, src: ['<%=files.src.js%>'], dest: 'temp/'},
                     {expand: true, src: ['<%=files.src.images%>'], dest: 'temp/'},
                     {expand: true, src: ['<%=files.src.json%>'], dest: 'temp/'},
+                    {expand: true, src: ['<%=files.src.fonts%>'], dest: 'temp/'},
  
                 ],
             },

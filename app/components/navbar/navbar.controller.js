@@ -8,13 +8,16 @@ function NavbarController (VERSION) {
         vm.isNavbarCollapsed = true;
         vm.toggleNavbar = toggleNavbar;
         vm.collapseNavbar = collapseNavbar;
+       // vm.horrizontalCollapse = true;
 
         function toggleNavbar() {
             vm.isNavbarCollapsed = !vm.isNavbarCollapsed;
+           // vm.horrizontalCollapse = !vm.horrizontalCollapse;
         }
 
         function collapseNavbar() {
             vm.isNavbarCollapsed = true;
+           // vm.horrizontalCollapse = true;
         }
 };
 
