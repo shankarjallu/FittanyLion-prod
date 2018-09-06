@@ -1,3 +1,9 @@
+#logincheckbox {
+  width: 20px;
+  /*Desired width*/
+  height: 20px;
+  /*Desired height*/ }
+
 .custom-input {
   border: none !important;
   border-bottom: 2px solid gray !important;
