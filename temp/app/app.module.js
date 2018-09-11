@@ -3,5 +3,6 @@ angular.module('fittanyUiApp', [
             'ui.bootstrap',
             'ui.bootstrap.datetimepicker',
             'ui.router',
-            'angular-loading-bar'
+            'angular-loading-bar',
+            'ngStorage'
         ]);

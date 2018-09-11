@@ -1,36 +1,47 @@
 <div class="container">
 	<div class="container">
-		<h2>Title</h2>
-		<h2>Message</h2>
+		<h2>We are</h2>
+		<h2>Fittany Lions</h2>
 		<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+			Sign up or log in below.
 		</p>
 		
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12">
-			<form role="form" name="fittanylogin" novalidate ng-submit="fittanylogin.$valid && login()">
+			<form role="form" name="fittanyLoginForm" ng-submit="fittanyLoginForm.$valid && submitFittanyLogin(user)" novalidate>
 				<div class="form-group custom-form-group ">
-					<input placeholder="Email Address" type="email" name="email" id="email" class="form-control custom-input" ng-model="email"  required/>
-					<span style="color:red" ng-show="(fittanylogin.email.$dirty && fittanylogin.email.$invalid) || (fittanylogin.$submitted && fittanylogin.email.$invalid)">
-						<span ng-show="fittanylogin.email.$error.required">Email is required.</span>
-						<span ng-show="fittanylogin.email.$error.email">Invalid email address.</span>
-						</span>
-						
+					<input placeholder="Email Address" type="email" name="email" id="email" ng-model="user.email" class="form-control custom-input" required />
+					<span style="color:red" ng-show="(fittanyLoginForm.email.$dirty && fittanyLoginForm.email.$invalid) || (fittanyLoginForm.$submitted && fittanyLoginForm.email.$invalid)">
+						<span ng-show="fittanyLoginForm.email.$error.required">Email is required.</span>
+						<span ng-show="fittanyLoginForm.email.$error.email">Invalid email address.</span>
+					</span>
+					
 				</div>
 				<div class="form-group custom-form-group ">
-					<input placeholder="Password" type="password" name="password" id="password" class="form-control custom-input" ng-model="password" required/>
-					<span style="color:red" ng-show="(fittanylogin.$submitted && fittanylogin.password.$invalid) || (fittanylogin.password.$dirty && fittanylogin.password.$invalid)">
-						<span ng-show="fittanylogin.password.$error.required">Password is required.</span>
-						
-						</span>
+					<input placeholder="Password" type="password" name="password" id="password" ng-model="user.password" class="form-control custom-input" required />
+					<span style="color:red" ng-show="(fittanyLoginForm.password.$dirty && fittanyLoginForm.password.$invalid) || (fittanyLoginForm.$submitted && fittanyLoginForm.password.$invalid)">
+						<span ng-show="fittanyLoginForm.password.$error.required">Password is required.</span>
+					</span>
 				</div>
-				<label>
-					<input id="logincheckbox" type="checkbox" name="remember" data-ng-click="rememberMe()" data-ng-model="remember"> <span> Remember Me </span>
-					</label>
+				<div class="form-group row">
+					<div class="col-xs-3 margin-left">
+						
+						<label class="custom-checkbox" ng-class="{checkboxactive: user.rememberme}">
+							<input type="checkbox" name="rememberme" ng-model="user.rememberme" id="rememberme" value="rememberme">
+						</label>
+					</div>
+					<div class="col-xs-9" style="padding-left: 0px;">
+						<label for="rememberme" style="" class="highmark-label terms-condition">Remember Me
+						</label>
+					</div>
+					<div class="col-xs-12 padding-top" style="padding-left: 0px">
+						<a href="" style="text-decoration: underline;color:gray;">Forgot your password?</a>
+					</div>
+				</div>
 					
 				<div class="row button-group">
-					<div class="col-xs-6 col-sm-6">
+					<div class="col-xs-6 col-sm-6" style="margin-left: -15px;">
 						<button ng-class="{active: state.current.name === 'signup'}" ui-sref="signup" class="btn btn-default btn-lg custom-buttom">Sign Up</button>
 					</div>
 					<div class="col-xs-6 col-sm-6">

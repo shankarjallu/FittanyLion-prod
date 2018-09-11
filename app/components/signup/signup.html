@@ -1,71 +1,115 @@
 <div class="container">
 	<div class="container">
-		<img src="content/images/hipster.png" class="img-circle img-responsive" alt="profile pic" style="width:250px;height:250px;margin:10%;border:1px solid #d4c5c5">
+		<h2 style="text-align: center;color:#090910" class="">Register</h2>
 	</div>
 	
 	<div class="row">
 		<div class="col-xs-12 col-sm-12">
+			<div class="well alert alert-danger"  ng-show="error" style="">
+				<p>Error while posting to server, Please try again later. </p>
+				<p>Error code: {{message.status}}</p>
+			</div>
+			<div class="well alert alert-success" ng-show="success">
+				<p>Successfully posted! </p>
+			</div>
 			<form role="form" name="fittanySignupForm" novalidate ng-submit="fittanySignupForm.$valid &&  submitFittanySignup(user)">
 				<div class="form-group custom-form-group ">
 					
-					<input placeholder="Name" type="text" class="form-control custom-input" id="name" name="name" ng-model="user.name" required>
-					<span style="color:red" ng-show="(fittanySignupForm.name.$dirty && fittanySignupForm.name.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.name.$invalid)">
-						<span ng-show="fittanySignupForm.name.$error.required">Name is required.</span>
+					<input placeholder="First Name*" type="text" class="form-control custom-input" id="firstname" name="firstname" ng-model="user.firstname" required>
+					<span style="color:red" ng-show="(fittanySignupForm.firstname.$dirty && fittanySignupForm.firstname.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.firstname.$invalid)">
+						<span ng-show="fittanySignupForm.firstname.$error.required">First Name is required.</span>
+					</span>
+				</div>
+				<div class="form-group custom-form-group ">
+					
+					<input placeholder="Last Name*" type="text" class="form-control custom-input" id="lastname" name="lastname" ng-model="user.lastname" required>
+					<span style="color:red" ng-show="(fittanySignupForm.lastname.$dirty && fittanySignupForm.lastname.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.lastname.$invalid)">
+						<span ng-show="fittanySignupForm.lastname.$error.required">Last Name is required.</span>
 						<!-- <span ng-show="fittanySignupForm.name.$error.email">Invalid email address.</span> -->
 					</span>
 				</div>
 				<div class="form-group custom-form-group ">
 					
-					<input placeholder="Email Address" type="email" class="form-control custom-input" id="email" name="email" ng-model="user.email" required>
+					<input placeholder="Email Address*" type="email" class="form-control custom-input" id="email" name="email" ng-model="user.email" required>
 					<span style="color:red" ng-show="(fittanySignupForm.email.$dirty && fittanySignupForm.email.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.email.$invalid)">
 						<span ng-show="fittanySignupForm.email.$error.required">Email is required.</span>
 						<span ng-show="fittanySignupForm.email.$error.email">Invalid email address.</span>
 					</span>
 				</div>
 				<div class="form-group custom-form-group ">
-					<input placeholder="Password" type="password" class="form-control custom-input" id="pwd" name="password" ng-model="user.password" required>
+					<input placeholder="Password*" type="password" class="form-control custom-input" id="pwd" name="password" ng-model="user.password" required>
 					<span style="color:red" ng-show="(fittanySignupForm.password.$dirty && fittanySignupForm.password.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.password.$invalid)">
 						<span ng-show="fittanySignupForm.password.$error.required">Password is required.</span>
 					</span>
 				</div>
 				<div class="form-group custom-form-group ">
+					<input placeholder="Cofirm Password*" type="password" class="form-control custom-input" id="cpassword" name="cpassword" ng-model="user.cpassword" password-check="pwd" required>
+					<span style="color:red" ng-show="(fittanySignupForm.cpassword.$dirty && fittanySignupForm.cpassword.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.cpassword.$invalid)">
+						<span ng-show="fittanySignupForm.cpassword.$error.required">Please confirm the password.</span>
+					</span>
+					<span style="color:red" ng-show="fittanySignupForm.cpassword.$error.pwmatch && !fittanySignupForm.cpassword.$error.required
+					">
+    					Passwords don't match.
+  					</span>
+				</div>
+				<div class="form-group custom-form-group ">
 					
-					<input placeholder="Zipcode" type="tel" class="form-control custom-input" id="zip" name="zip" ng-model="user.zip" required>
+					<input placeholder="Zipcode*" type="tel" class="form-control custom-input" id="zip" name="zip" ng-model="user.zip"
+					ng-minlength="5"
+					ng-maxlength="5"
+					ng-pattern="/^[0-9]*$/"
+					zip-check
+					required>
 					<span style="color:red" ng-show="(fittanySignupForm.zip.$dirty && fittanySignupForm.zip.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.zip.$invalid)">
 						<span ng-show="fittanySignupForm.zip.$error.required">Zip is required.</span>
-						<span ng-show="fittanySignupForm.zip.$error.email">Invalid Zip.</span>
+						<span ng-show="fittanySignupForm.zip.$error.pattern
+						">Only number is allowed.</span>
+						<span ng-show="fittanySignupForm.zip.$error.minlength ||
+							fittanySignupForm.zip.$error.maxlength
+						">Zip code must be 5 digits.</span>
+						<span ng-show="fittanySignupForm.zip.$error.pazip
+						">Not a Pennsylvania zip.</span>
 					</span>
+					<span style="color:red" ng-show="fittanySignupForm.zip.$pending.pazip
+					">Checking zip code...</span>
 				</div>
-				<p class="text-muted">This fitness challenge program is available only for residents on PA.</p>
-				<div class="form-group">
-					<label for="age" class="highmark-label">How old are you? </label><br>
-					<label for="radio-1" class="input-checkbox" ng-class="below25">25 and below
-						<input type="radio" name="age" id="radio-1" ng-model="user.age" value="25below"  ng-click="radioAge()" required>
-					</label>
-					<label for="radio-2" class="input-checkbox" ng-class="above25">26-64
-						<input type="radio" name="age" ng-model="user.age" id="radio-2" value="2564" ng-click="radioAge()" required>
-					</label>
-					<label for="radio-3" class="input-checkbox" ng-class="above65">65 and above
-						<input type="radio" name="age" ng-model="user.age" id="radio-3" value="65above" ng-click="radioAge()" required>
-					</label>
+				<p class="text-muted">This fitness challenge program is available only for residents in PA.</p>
+				<div class="row padding-top">
+					<label for="age" class="highmark-label">How old are you?* </label><br>
+					<div class="col-xs-4" style="padding: 0 5px 0 0;">
+						<label for="radio-1" class="input-checkbox" ng-class="below25">25 and below
+							<input type="radio" name="age" id="radio-1" ng-model="user.age" value="25below"  ng-click="radioAge()" required>
+						</label>
+					</div>
+					<div class="col-xs-4" style="padding: 0 5px 0 0;">
+						<label for="radio-2" class="input-checkbox" ng-class="above25">26-64
+							<input type="radio" name="age" ng-model="user.age" id="radio-2" value="2564" ng-click="radioAge()" required>
+						</label>
+					</div>
+					<div class="col-xs-4" style="padding: 0 5px 0 0;">
+						<label for="radio-3" class="input-checkbox" ng-class="above65">65 and above
+							<input type="radio" name="age" ng-model="user.age" id="radio-3" value="65above" ng-click="radioAge()" required>
+						</label>
+					</div>
 					<span style="color:red" ng-show="(fittanySignupForm.age.$dirty && fittanySignupForm.age.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.age.$invalid)">
 						<span ng-show="fittanySignupForm.age.$error.required">Age is required.</span>
 					</span>
 					
 				</div>
-				<div class="form-group" id="pennalum">
-					<label  class="highmark-label">Are you PennState University's alumni? </label><br>
-					
-					<label for="radio-4" class="input-checkbox" style="width:155px;text-align:left;padding-left:10px;" ng-class="palum">Yes
-						<input type="radio" name="pennalum" ng-model="user.pennalum" id="radio-4" value="pennAlum" ng-click="pennAlum()" required>
-						<span class="radio-circle" ng-class="alumActive">&#8226;</span>
-					</label>
-					
-					
-					<label for="radio-5" class="input-checkbox" style="width: 155px;text-align:left;padding-left: 10px;" ng-class="npalum">No
-						<input type="radio" name="pennalum" ng-model="user.pennalum" id="radio-5" value="noalum" ng-click="pennAlum()" required>
-						<span class="radio-circle" ng-class="noalumActive">&#8226;</span>
-					</label>
+				<div class="row padding-top" id="pennalum">
+					<label  class="highmark-label">Are you PennState student,faculty, or alumni?* </label><br>
+					<div class="col-xs-6" style="padding: 0 5px 0 0;">
+						<label for="radio-4" class="input-checkbox" style="text-align:left;padding-left:10px;" ng-class="palum">Yes
+							<input type="radio" name="pennalum" ng-model="user.pennalum" id="radio-4" value="pennAlum" ng-click="pennAlum()" required>
+							<span class="radio-circle" ng-class="alumActive">&#8226;</span>
+						</label>
+					</div>
+					<div class="col-xs-6" style="padding: 0 5px 0 0;">
+						<label for="radio-5" class="input-checkbox" style="text-align:left;padding-left: 10px;" ng-class="npalum">No
+							<input type="radio" name="pennalum" ng-model="user.pennalum" id="radio-5" value="noalum" ng-click="pennAlum()" required>
+							<span class="radio-circle" ng-class="noalumActive">&#8226;</span>
+						</label>
+					</div>
 					<span style="color:red" ng-show="(fittanySignupForm.pennalum.$dirty && fittanySignupForm.pennalum.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.pennalum.$invalid)">
 						<span ng-show="fittanySignupForm.pennalum.$error.required">Please answer yes/no.
 						</span>
@@ -73,35 +117,67 @@
 					
 					
 				</div>
-				<div class="form-group row">
-					<div class="col-xs-3">
-						<!-- <input type="checkbox" class="custom-checkbox" name="terms" id="terms" required> -->
+				<div class="form-group row padding-top">
+					<div class="col-xs-3 margin-left">
 						
 						<label class="custom-checkbox" ng-class="{checkboxactive: user.terms}">
 							<input type="checkbox" name="terms" ng-model="user.terms" id="terms" value="terms" required>
 						</label>
-
-					</span>
 					</div>
 					<div class="col-xs-9" style="padding-left: 0;">
-						<label for="terms" class="highmark-label terms-condition">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						<label for="terms" class="highmark-label terms-condition">I have read and I accept all the <a class="fittanyLinks" href="">Terms & Conditions</a> and the <a href="" class="fittanyLinks">Liability Release.</a>
 						</label>
 					</div>
-					<!-- <div class="checkbox-error alert alert-danger">
-						<span>Please check the box to continue!</span>
-					</div> -->
+					
 					<div class="checkbox-error">
 						<span style="color:red" ng-show="(fittanySignupForm.terms.$dirty && fittanySignupForm.terms.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.terms.$invalid)">
-						<span ng-show="fittanySignupForm.terms.$error.required">Please agree our terms and conditions.
+							<span ng-show="fittanySignupForm.terms.$error.required">Please agree our terms and conditions.
+							</span>
 						</span>
-					</span>
 					</div>
 					
-					
 				</div>
-				<div class="row button-group">
-					<div class="col-xs-12 col-sm-12">
-						<button ng-class="{active: state.current.name === 'signup'}" class="btn btn-default btn-lg custom-buttom" style="margin-left:25%;width:160px;">Sign Up</button>
+				<div class="form-group row">
+					<div class="col-xs-3 margin-left">
+						
+						<label class="custom-checkbox" ng-class="{checkboxactive: user.rules}">
+							<input type="checkbox" name="rules" ng-model="user.rules" id="rules" value="rules" required>
+						</label>
+					</div>
+					<div class="col-xs-9" style="padding-left: 0;">
+						<label for="rules" class="highmark-label terms-condition">I have read and I accept all the <a class="fittanyLinks" href="">Program Rules.</a>
+						</label>
+					</div>
+					
+					<div class="checkbox-error">
+						<span style="color:red" ng-show="(fittanySignupForm.rules.$dirty && fittanySignupForm.rules.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.rules.$invalid)">
+							<span ng-show="fittanySignupForm.rules.$error.required">Please agree our rules.
+							</span>
+						</span>
+					</div>	
+				</div>
+				<div class="form-group row">
+					<div class="col-xs-3 margin-left">
+						
+						<label class="custom-checkbox" ng-class="{checkboxactive: user.medicalrules}">
+							<input type="checkbox" name="medicalrules" ng-model="user.medicalrules" id="medicalrules" value="medicalrules" required>
+						</label>
+					</div>
+					<div class="col-xs-9" style="padding-left: 0;">
+						<label for="medicalrules" class="highmark-label terms-condition">If I am unable to complete, or have been advised by a medical professional not to participate in a challenge, I retain the right to mark the challenge as complete.
+						</label>
+					</div>
+					
+					<div class="checkbox-error">
+						<span style="color:red" class="padding-top" ng-show="(fittanySignupForm.medicalrules.$dirty && fittanySignupForm.medicalrules.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.medicalrules.$invalid)">
+							<span ng-show="fittanySignupForm.medicalrules.$error.required" >Please agree our rules.
+							</span>
+						</span>
+					</div>	
+				</div>
+				<div class="row button-group padding-top">
+					<div class="col-xs-12 col-sm-12 padding-top">
+						<button ng-class="{active: state.current.name === 'signup'}" class="btn btn-default btn-lg custom-buttom" style="">Sign Up</button>
 					</div>
 					
 				</div>

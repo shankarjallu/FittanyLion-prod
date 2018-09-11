@@ -8,7 +8,7 @@
 
 .custom-input {
 	border: none !important;
-	border-bottom: 2px solid gray !important;
+	border-bottom: 2px solid #150a0a3b !important;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 	border-radius: 0 !important;
@@ -16,6 +16,8 @@
 	font-family: open-sans !important;
 	padding-left:0 !important;
     color:#000 !important;
+    background-color:#fafafa !important;
+    width: 100% !important;
 }
 .custom-form-group {
 	margin-bottom: 20px !important;
@@ -24,13 +26,15 @@
 .custom-buttom {
     padding: 14px 26px !important;
     font-size: 32px !important;
-    border-radius: 75px !important;
-    border: 3px solid black !important;
+    border-radius: 0 !important;
+    border: 2px solid #232348;
     font-family: open-sans !important;
+    width:100%;
 }
 .custom-buttom:hover, .custom-buttom:active,.custom-buttom.active{
 	color: #ffffff !important;
-    background-color: #080808 !important;
+    background-color: #242835!important;
+    border:0 !important;
 }
 
 .button-group{
@@ -59,56 +63,24 @@
 
 }
 
- .ui-button{
- 	border: 1px solid #c5c5c5 !important;
-    border-radius: 60px !important;
-    width: 100px !important;
-    height: 40px !important;
-    padding:12px !important;
-    font-size:12px !important;
-
- }
- .ui-state-active, .ui-button.ui-state-active:hover, .ui-button:active{
- 	background-color:#fff !important;
- 	border:1px solid black !important;
- 	color:#000000 !important;
- 	background:none !important;
-
-
- }
-//  .ui-visual-focus {
-// 	box-shadow: 0 0 3px 1px black !important;
-// }
-// #pennalum .ui-button{
-// 	width: 150px !important;
-// }
-// #pennalum .radio-dot{
-// 	width: 25px !important;
-// 	border:1px solid gray;
-// 	border-radius: 50%;
-// 	color:gray;
-// 	height:25px;
-// 	position:relative;
-// 	margin-left:85px;
-// 	background:gray;
-// }
-.ui-state-active .radio-dot-active{
-		color:#000000 !important;
-		background:#000000 !important;
-	}
+ 
+// .ui-state-active .radio-dot-active{
+// 		color:#000000 !important;
+// 		background:#000000 !important;
+// 	}
 .custom-checkbox.checkboxactive:after{
   	content:'\2713';
   	display:block;
   	color:black;
-    font-size:30px;
-  	//padding:0 6px 0 0;
+    font-size:14px;
+  	padding-left:2px;
   }
  .custom-checkbox{
  	margin: 0px !important;
     border: 1px solid #808080 !important;
     border-radius: 0 !important;
-    width: 40px !important;
-    height: 40px !important;
+    width: 20px !important;
+    height: 20px !important;
     font-size: 12px !important;
     background-color: #fff !important;
     margin-left: 15px !important;
@@ -129,18 +101,21 @@
     margin-top:40px;
 }
 .input-checkbox{
-    border: 1px solid gray;
-    padding: 10px 0px 0px 0px;
-    border-radius: 30px;
+   // border: 1px solid gray;
+    padding: 9px 0px 0px 0px;
+    border-bottom: 1px solid #80808061;
     color: #808080e3;
     height: 35px;
     cursor: pointer;
     width: 100px;
     text-align: center;
+    width: 100% !important;
+    background-color: #8c868614 !important;
 }
 .inputcheckboxactive{
-    border: 2px solid #000;
     color:#000;
+    border-bottom: 1px solid;
+    background-color: #cfe3f5 !important;
 }
 .input-checkbox input{
     width:0px;
@@ -153,43 +128,62 @@
 }
 .radio-circle {
     content:'\2022';
-    margin-left: 120px;
     margin-top:-37px;
     color:gray;
     font-size:40px;
     height:0px;
     display:block;
+    text-align:right;
+    padding-right:15px;
 }
-@media only screen and (min-width: 1201px){
-    .terms-condition{
-        position:absolute;
-        margin-left:-190px;
+
+@media screen and (max-width:767px){
+    .profile-pic{
+        margin:10%;
+    }
+}
+@media screen and (min-width:768px){
+    .profile-pic{
+        margin:5% 30%;
+    }
+    .margin-left{
+        position:relative;
+        margin-left:-30px;
     }
 }
 
 @media only screen and (max-width:481px){
     .custom-checkbox {
         margin-left: -15px !important;
+        margin-top:-2px !important;
     }
     .custom-buttom {
         padding: 10px 1px!important;
         font-size: 20px!important;
-        border-radius: 75px!important;
-        border: 3px solid #000!important;
-        width: 115px;
+        border-radius: none;
+        border: 2px solid #232348;
     }
     .highmark-label{
         font-size:12px !important;
     }
     .terms-condition{
-        position:relative;
-        margin-left:-20px;
-        margin-top: 10px;
-        font-size: 15px !important;
+        font-size: 11px !important;
     }
 }
 .checkboxactive{
     border: 2px solid #696363fa !important;
+}
+
+.padding-top{
+    padding-top:25px;
+}
+.fittanyLinks{
+    color: #0a1c2b !important;
+    text-decoration:underline !important;
+}
+.terms-condition{
+    position:absolute;
+    margin-left:-22%;
 }
 
 
