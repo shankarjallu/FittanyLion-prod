@@ -4,23 +4,23 @@
 angular.module('fittanyUiApp')
  
 .controller('LoginController',
-    ['$scope', 'AuthService','$state',
-    function ($scope, AuthService,$state) {
-        console.log("This is login controller");
+    ['$scope','$state','$localStorage',
+    function ($scope,$state,$localStorage) {
+        console.log("Inside login controller");
         $scope.state = $state;
-        console.log($scope.state.current.name);
-        $scope.login = function () {          
-            //code for spinner comes here
+         $scope.submitFittanyLogin = function(user){
+                var formData = {};                
+                if(user){
+                    formData.user = user;
+                    console.log("logged in user: " + user.email + " : " + user.password
+                        );
+                    if(user.rememberme){
+                        $localStorage.rememberUser = formData;
+                    }
 
-            AuthService.Login($scope.email,$scope.password,function(response){
-                if(response.success){
-                     alert("correct details");
-                }else{
-                     alert("in correct details");
                 }
-            });
-           
-        };
+            }
+        
     }]);
 
 

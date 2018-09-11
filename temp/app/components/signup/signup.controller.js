@@ -3,8 +3,8 @@
 
 angular.module('fittanyUiApp')
        .controller('SignupController',
-    	['$scope', '$state',
-    		function ($scope, $state) {
+    	['$scope', '$state','SignupService',
+    		function ($scope, $state, SignupService) {
         		console.log("This is signup controller");
         	$scope.state = $state;
         	$scope.radioAge = function(){
@@ -50,15 +50,39 @@ angular.module('fittanyUiApp')
         $scope.submitFittanySignup = function(user){
         		var formData = {};
                 var reset = {};
+                $scope.error = false;
+                $scope.success = false;
+                // var paZip = "";
+                // var checkZip = ZipService.get({zip: user.zip});
+                //  console.log("zip res: " + checkZip);   
         		if(user){
+                    var newuser = new SignupService();
         			formData = user;
-                    $scope.fittanySignupForm.$setPristine();
-                    $scope.fittanySignupForm.$setUntouched();
-                    $scope.user = angular.copy(reset);
-                    resetClass();
+                    newuser.data = formData;
+                    var promise = newuser.$save();
+                    promise.then(function(res){
+                        $scope.error = false;
+                        $scope.success = true;
+                        $scope.message = res;
+                        console.log(res);
+                        $state.go("login");
+                        
+                    },function(err){
+                        console.log("error occured while posting");
+                        console.log(err);
+                        $scope.error = true;
+                        $scope.success = false;
+                        $scope.message = err;
+                    });
+                        $scope.fittanySignupForm.$setPristine();
+                        $scope.fittanySignupForm.$setUntouched();
+                        $scope.user = angular.copy(reset);
+                        resetClass();   
         			console.log("signup form value: " + Object.keys(formData));
         			
         		}
         };
+
+
     }]);
 })();

@@ -2,9 +2,11 @@
 	margin-left:0px !important;
 	margin-right:0px !important;
 }
-@media only screen and (min-width:481px) and (max-width:768px){
+@media only screen and (min-width:481px) and (max-width:991px){
     .background_cover_bottom{
         background: url("content/images/Texture-email fields.png") no-repeat !important;
+        background-size:cover;
+        background-position: center;
     }
 }
 @media only screen and (min-width:1441px){
@@ -19,7 +21,7 @@
 @media only screen and (min-width: 1201px){
     .col-position{
         position:absolute;
-        left:645px;
+        left:50%;
     }
     .fittany_h1{
         font-weight: 500;
@@ -48,9 +50,13 @@
 	.background_cover_top{
 	 	background: url("content/images/Lion-Desktop.png") no-repeat;
         height:679px;
+        background-position: center;
+
 	}
 	.background_cover_bottom{
 		background: url("content/images/Texture-email fields.png") no-repeat;
+        background-size:cover;
+        background-position: center;
 	}
 	.fittany-logo-desktop{
     	margin: 20px 0 0 30px;
@@ -70,21 +76,19 @@
         font-size: 20px;
         padding: 0 16px;
         text-align: left;
-        padding-top: 0px;
-        color:#fff;
+        color: #fff;
     }
     .fittany_subheading{
-        font-weight: 300;
+        font-weight: 500;
         font-size: 25px;
-        padding-top: 0;
         color: #8e8383;
         text-align:left;
     }
     .fittany_p{
-        text-align: center;
+        text-align: left;
         font-weight: lighter;
-        line-height: 20px;
-        font-size: 15px;
+        line-height: 1.4;
+        font-size: 16px;
         color:#8e8383;
     }
     .align-left{
@@ -93,18 +97,17 @@
         margin-right:200px;
     }
     .fittany_h1_variance{
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
-        font-weight: 900;
+        font-weight: 500;
         color: #091d3c;
         text-align:center;
-        padding-bottom:20px;
     }
     .fittany_p_variance{
         padding: 0 10px;
         text-align: left;
         font-weight: lighter;
-        line-height: 25px;
+        line-height: 1.4;
         font-size: 16px;
         color:#091d3c;
     }
@@ -114,21 +117,32 @@
     .button_padding{
         padding-right:30px;
     }
-    .disclaimer {
-     position:relative;
-     margin-left:-320px;
-}
     
 }
-@media screen and (max-width: 768px) {
+    
+
+@media screen and (min-width:501px) and (max-width:991px){
+    .col-margin {
+        padding-left:18%;
+    }
+    .fittany_p{
+        text-align:left;
+    }
+    .fittany_p_variance{
+        text-align:left;
+    }
+}
+@media screen and (max-width: 991px) {
 	.background_cover_top{
 	 	background: url("content/images/Lion-Mobile.png") no-repeat;
         height:300px;
-        background-position:center;
-
+        background-position: center;
+        
 	}
 	.background_cover_bottom{
 		background: url("content/images/Texture-email fields-Mobile.png") no-repeat;
+        background-size:cover;
+        background-position: center;
 	}
 	.content_div{
     	position: relative;
@@ -156,9 +170,8 @@
 		display:none;
 	}
     .fittany_h1{
-        font-weight: bolder;
-        font-size: 24px;
-        padding: 0 16px;
+        font-weight: 500;
+        font-size: 25px;
         text-align: center;
         padding-top: 0px;
         color:#fff;
@@ -170,9 +183,8 @@
         color: #091d3c;
     }
     .fittany_subheading{
-        font-weight: 300;
-        font-size: 22px;
-        padding-top: 0;
+        font-weight: 500;
+        font-size: 25px;
         color: #fff;
         margin-left: inherit;
     }
@@ -180,15 +192,16 @@
         padding: 0 10px;
         text-align: center;
         font-weight: lighter;
-        line-height: 25px;
-        font-size: 13px;
-        color:#fff;
+        line-height: 1.4;
+        font-size: 16px;
+        color:#a09696;
+
     }
     .fittany_p_variance{
         padding: 0 10px;
         text-align: center;
         font-weight: lighter;
-        line-height: 25px;
+        line-height: 1.4;
         font-size: 16px;
         color:#091d3c;
     }
@@ -252,7 +265,7 @@ input.fittany_form_input::placeholder{
     -webkit-box-shadow: none!important;
     box-shadow: none!important;
     border-radius: 0!important;
-    font-size: 30px!important;
+    font-size: 25px!important;
     font-weight:300;
     text-align:center;
     // padding-left: 20px !important;
@@ -262,15 +275,18 @@ input.fittany_form_input::placeholder{
     width:100%;
 }
 .fittany_form_button:hover, .fittany_form_button2:hover{
-        background: none;
+    background: #9e9b9b;
 }
 .disclaimer {
 	color: #091d3c !important;
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
 }
 .footer_disclaimer{
     padding-top:50px;
     padding-bottom:50px;
+}
+.margin-bottom{
+    margin-bottom: 20px;
 }

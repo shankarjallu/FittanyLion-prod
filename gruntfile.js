@@ -177,8 +177,9 @@ module.exports = function(grunt) {
                 },
                 options: {
                     watch: true,
-                    server: './',
-                    port:3000
+                    server: ['./'],
+                    port:3000,
+                    ignore: ['app/testapi/db.json']
                 }
             //}
         },
@@ -218,8 +219,7 @@ module.exports = function(grunt) {
         },
 
         clean: ['<%= pkg.js_bundle_path %>'],
-        clean_html: ['<%= pkg.js_bundle_path %>**/*.html']
-
+        clean_html: ['<%= pkg.js_bundle_path %>**/*.html'],
 
     });
 
@@ -239,6 +239,10 @@ module.exports = function(grunt) {
 
     // grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-browser-sync');
+    // grunt.loadNpmTasks('grunt-json-server');
+    // grunt.loadNpmTasks('grunt-concurrent');
+
+
 
 
     // run tests

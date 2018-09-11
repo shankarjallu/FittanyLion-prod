@@ -1,0 +1,177 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "dfdfd",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 2
+    },
+    {
+      "data": {
+        "name": "SEVIKA ADHIKARI",
+        "email": "sevikaadhikari19@gmail.com",
+        "zip": "15234",
+        "password": "dfdf",
+        "age": "2564",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 3
+    },
+    {
+      "data": {
+        "name": "BHIM DAHAL",
+        "email": "bhimdhl@gmail.com",
+        "zip": "15220",
+        "password": "dfdf",
+        "age": "2564",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 4
+    },
+    {
+      "data": {
+        "name": "SEVIKA ADHIKARI",
+        "email": "sevikaadhikari19@gmail.com",
+        "zip": "15234",
+        "password": "dfdfdf",
+        "age": "2564",
+        "pennalum": "noalum",
+        "terms": true
+      },
+      "id": 5
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "adfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 6
+    },
+    {
+      "data": {
+        "name": "dfdf",
+        "email": "dfdf@dfdf",
+        "password": "dfdf",
+        "zip": "12345",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 7
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "dfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 8
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "adfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 9
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "dfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 10
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "dfdfd",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 11
+    },
+    {
+      "data": {
+        "name": "SEVIKA ADHIKARI",
+        "email": "sevikaadhikari19@gmail.com",
+        "zip": "15234",
+        "password": "adfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 12
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "dfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 13
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "zip": "15220",
+        "password": "adfdfdf",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 14
+    },
+    {
+      "data": {
+        "name": "Bhim Dahal",
+        "email": "bhimdahal2446@gmail.com",
+        "password": "asdfd",
+        "zip": "15220",
+        "age": "25below",
+        "pennalum": "pennAlum",
+        "terms": true
+      },
+      "id": 15
+    }
+  ]
+}
