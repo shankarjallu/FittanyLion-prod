@@ -58,14 +58,18 @@ module.exports = function(grunt) {
                     reload: true
                 }
             },
-            livereload:{
-                files: ['temp/app/**/*js','temp/content/**/*.css', 'temp/scss/**/*.scss', 'temp/app/**/*.html' ,'index.html','temp/content/images/**'],
-                options:{
-                   livereload:true
-                }
-                
+            options:{
+                livereload:true,
             },
-            js: {
+            // livereload:{
+            //     //files: ['temp/app/**/*js','temp/content/**/*.css', 'temp/scss/**/*.scss', 'temp/app/**/*.html' ,'index.html','temp/content/images/**'],
+            //     files:['app/**/*.*'],
+            //     options:{
+            //        livereload:true
+            //     }
+                
+            // },
+            scripts: {
                 files: ['<%=files.src.js%>*.js'],
                 tasks: ['jshint', 'copy']
             },
@@ -159,30 +163,30 @@ module.exports = function(grunt) {
             target: ['<%=files.src.sass%>']
         },
 
-        // connect: {
-        //     server: {
-        //         options: {
-        //             port: 3000,
-        //             hostname: 'localhost',
-        //             livereload: true
-        //         }
-        //     }
-        // },
-        browserSync: {
-           // dev: {
-                bsFiles: {
-                    src : [
-                        'app/**/*.js', 'app/**/*.html', 'content/**/*.css', 'scss/**/*.scss', 'index.html','content/images/**'
-                    ]
-                },
+        connect: {
+            server: {
                 options: {
-                    watch: true,
-                    server: ['./'],
-                    port:3000,
-                    ignore: ['app/testapi/db.json']
+                    port: 3000,
+                    hostname: 'localhost',
+                    livereload: true
                 }
-            //}
+            }
         },
+        // browserSync: {
+        //    // dev: {
+        //         bsFiles: {
+        //             src : [
+        //                 'app/**/*.js', 'app/**/*.html', 'content/**/*.css', 'scss/**/*.scss', 'index.html','content/images/**'
+        //             ]
+        //         },
+        //         options: {
+        //             watch: true,
+        //             server: ['./'],
+        //             port:3000,
+        //             ignore: ['app/testapi/db.json']
+        //         }
+        //     //}
+        // },
 
         processhtml: (function() {
             if (grunt.config('env') === 'dev') {
@@ -238,10 +242,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // grunt.loadNpmTasks('grunt-contrib-jasmine');
-    grunt.loadNpmTasks('grunt-browser-sync');
-    // grunt.loadNpmTasks('grunt-json-server');
-    // grunt.loadNpmTasks('grunt-concurrent');
-
+    //grunt.loadNpmTasks('grunt-browser-sync');
+    
 
 
 
@@ -256,6 +258,6 @@ module.exports = function(grunt) {
 
     // Run server and watch for changes
     grunt.registerTask('default', ['build']);
-    grunt.registerTask('run', ['build', 'browserSync', 'watch']);
+    grunt.registerTask('run', ['build', 'connect', 'watch']);
 
 };

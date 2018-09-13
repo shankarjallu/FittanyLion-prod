@@ -64,7 +64,8 @@
   display: none; }
 
 .checkbox-error {
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin-left: 25px; }
 
 .input-checkbox {
   padding: 9px 0px 0px 0px;
@@ -140,103 +141,103 @@
   position: absolute;
   margin-left: -22%; }
 
-.container, .row {
-  margin-left: 0px !important;
-  margin-right: 0px !important; }
+#fittany-body .container, .row {
+  margin-left: 0px;
+  margin-right: 0px; }
 
 @media only screen and (min-width: 481px) and (max-width: 991px) {
-  .background_cover_bottom {
-    background: url("content/images/Texture-email fields.png") no-repeat !important;
+  #fittany-body .background_cover_bottom {
+    background: url("content/images/Texture-email fields.png") no-repeat;
     background-size: cover;
     background-position: center; } }
 @media only screen and (min-width: 1441px) {
-  .fittany_h1 {
-    font-weight: 500 !important;
-    font-size: 37px !important;
-    padding: 0 16px !important;
-    padding-top: 0px !important;
-    color: #fff !important; } }
+  #fittany-body .fittany_h1 {
+    font-weight: 500;
+    font-size: 37px;
+    padding: 0 16px;
+    padding-top: 0px;
+    color: #fff; } }
 @media only screen and (min-width: 1201px) {
-  .col-position {
+  #fittany-body .col-position {
     position: absolute;
     left: 50%; }
 
-  .fittany_h1 {
+  #fittany-body .fittany_h1 {
     font-weight: 500;
     font-size: 20px;
     padding: 0 16px;
     padding-top: 0px;
     color: #fff; }
 
-  .fittany_subheading {
+  #fittany-body .fittany_subheading {
     font-weight: 300;
     font-size: 28px;
     padding-top: 0;
     color: #8e8383; }
 
-  .fittany_p {
+  #fittany-body .fittany_p {
     font-weight: lighter;
     line-height: 20px;
     font-size: 18px;
     color: #8e8383; }
 
-  .img_padding {
+  #fittany-body .img_padding {
     padding-left: 35px; } }
 @media only screen and (min-width: 769px) {
-  .background_cover_top {
+  #fittany-body .background_cover_top {
     background: url("content/images/Lion-Desktop.png") no-repeat;
     height: 679px;
     background-position: center; }
 
-  .background_cover_bottom {
+  #fittany-body .background_cover_bottom {
     background: url("content/images/Texture-email fields.png") no-repeat;
     background-size: cover;
     background-position: center; }
 
-  .fittany-logo-desktop {
+  #fittany-body .fittany-logo-desktop {
     margin: 20px 0 0 30px;
     display: block;
     background-color: #ededed; }
 
-  .fittany-logo-mobile {
+  #fittany-body .fittany-logo-mobile {
     display: none; }
 
-  .col-margin {
+  #fittany-body .col-margin {
     margin-top: 100px; }
 
-  .fittany_h1 {
+  #fittany-body .fittany_h1 {
     font-weight: 500;
     font-size: 20px;
     padding: 0 16px;
     text-align: left;
     color: #fff; }
 
-  .fittany_subheading {
+  #fittany-body .fittany_subheading {
     font-weight: 500;
     font-size: 25px;
     color: #8e8383;
     text-align: left; }
 
-  .fittany_p {
+  #fittany-body .fittany_p {
     text-align: left;
     font-weight: lighter;
     line-height: 1.4;
     font-size: 16px;
     color: #8e8383; }
 
-  .align-left {
+  #fittany-body .align-left {
     left: 320px;
     margin-left: 200px;
     margin-right: 200px; }
 
-  .fittany_h1_variance {
+  #fittany-body .fittany_h1_variance {
     font-size: 20px;
     text-align: center;
     font-weight: 500;
     color: #091d3c;
     text-align: center; }
 
-  .fittany_p_variance {
+  #fittany-body .fittany_p_variance {
     padding: 0 10px;
     text-align: left;
     font-weight: lighter;
@@ -244,19 +245,19 @@
     font-size: 16px;
     color: #091d3c; }
 
-  .share {
+  #fittany-body .share {
     display: none; }
 
-  .button_padding {
+  #fittany-body .button_padding {
     padding-right: 30px; } }
 @media screen and (min-width: 501px) and (max-width: 991px) {
-  .col-margin {
+  #fittany-body .col-margin {
     padding-left: 18%; }
 
-  .fittany_p {
+  #fittany-body .fittany_p {
     text-align: left; }
 
-  .fittany_p_variance {
+  #fittany-body .fittany_p_variance {
     text-align: left; } }
 @media screen and (max-width: 991px) {
   .background_cover_top {
@@ -336,59 +337,59 @@
   .button_padding {
     padding-left: 30px;
     padding-right: 30px; } }
-.hero_container {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+#fittany-body .hero_container {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
   top: 0; }
 
-.fittany_form_input {
-  border: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  font-size: 24px !important;
-  padding-left: 20px !important;
-  height: 70px;
-  background-color: #56515159;
-  color: #000 !important; }
+#fittany-body .fittany_form_input {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 20px;
+  height: 55px;
+  background-color: #d4cfcfdb;
+  color: #000;
+  width: 100%; }
 
 input.fittany_form_input::placeholder {
   color: #000; }
 
-.fittany_form_button {
-  border: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  font-size: 30px !important;
+#fittany-body .fittany_form_button {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 20px;
   font-weight: 300;
   text-align: center;
-  height: 70px;
+  height: 55px;
   background-color: #091d3c;
-  color: #fff !important;
+  color: #fff;
   width: 100%; }
 
-.fittany_form_button2 {
-  border: 2px solid #091d3c !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  font-size: 25px !important;
+#fittany-body .fittany_form_button2 {
+  border: 2px solid #091d3c;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 25px;
   font-weight: 300;
   text-align: center;
   height: 70px;
   background: transparent;
-  color: #091d3c !important;
+  color: #091d3c;
   width: 100%; }
 
-.fittany_form_button:hover, .fittany_form_button2:hover {
-  background: #9e9b9b; }
+#fittany-body .fittany_form_button:hover, .fittany_form_button2:hover {
+  background: #091d3c; }
 
-.disclaimer {
-  color: #091d3c !important;
+#fittany-body .disclaimer {
+  color: #091d3c;
   text-decoration: underline;
   font-size: 15px;
   font-weight: 400; }

@@ -34,17 +34,6 @@
 	padding-top: 20px !important;
 }
 
-// .radio-custom{
-// 	position: relative;
-//     top: 0;
-//     left: 0;
-//     height: 50px;
-//     width: 180px;
-//     background-color: #fff;
-//     border-radius: 75px;
-//     border: 1px solid gray;
-//     cursor:pointer;
-// }
 .highmark-label{
 	font-size:20px !important;
 	color:#7d7575fa !important;
@@ -56,11 +45,6 @@
 
 }
 
- 
-// .ui-state-active .radio-dot-active{
-// 		color:#000000 !important;
-// 		background:#000000 !important;
-// 	}
 .custom-checkbox.checkboxactive:after{
   	content:'\2713';
   	display:block;
@@ -85,13 +69,10 @@
  .custom-checkbox input[type="checkbox"]{
     display:none;
  }
- // .custom-checkmark::after{
- // 	content: "\2713";
- // 	font-size:30px;
- // 	margin-left:8px;
- // }
+ 
  .checkbox-error{
     margin-top:40px;
+    margin-left: 25px;
 }
 .input-checkbox{
    // border: 1px solid gray;
