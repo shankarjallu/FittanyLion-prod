@@ -1,13 +1,31 @@
 (function() {
+    angular.module('fittanyUiApp')
+        .controller('NotifyController',['$scope','$http','$state',
 
-function NotifyController (DisclaimerService) {
-		console.log("initializing notify controller..");
-        var vm = this;
-        vm.open = DisclaimerService.open;
-
-};
+            function($scope,$http,$state) {
+                console.log("this is in notify");
 
 
-angular.module('fittanyUiApp')
-        .controller('NotifyController', NotifyController);
+
+                $scope.loginNotify = function() {
+
+
+                    console.log("The email" + $scope.emailnotify);
+
+
+                    var url = "/api/user";
+                    $http.post(url)
+                        .then(function(response) {
+                           
+                        
+                        }, function(response) {
+                          
+                     //just for dev testing  
+                       $state.go('login')
+                        });
+                }
+
+            }
+
+        ]);
 })();
