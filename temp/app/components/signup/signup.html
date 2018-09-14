@@ -29,7 +29,7 @@
 				</div>
 				<div class="form-group custom-form-group ">
 					
-					<input placeholder="Email Address*" type="email" class="form-control custom-input" id="email" name="email" ng-model="user.email" required>
+					<input placeholder="Email Address*" type="email" class="form-control custom-input" id="email" name="email" ng-model="user.email" email-validation required>
 					<span style="color:red" ng-show="(fittanySignupForm.email.$dirty && fittanySignupForm.email.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.email.$invalid)">
 						<span ng-show="fittanySignupForm.email.$error.required">This is a required field.</span>
 						<span ng-show="fittanySignupForm.email.$error.email">Invalid email address.</span>
