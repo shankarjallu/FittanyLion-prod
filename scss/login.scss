@@ -179,3 +179,8 @@
 #fittany-body .modal-backdrop {
     background-color: white;
  }
+
+ #fittany-body .modal-backdrop.in {
+    
+    opacity: 0.8;
+}

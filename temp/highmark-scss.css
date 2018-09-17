@@ -147,6 +147,12 @@
   position: absolute;
   margin-left: -22%; }
 
+#fittany-body .modal-backdrop {
+  background-color: white; }
+
+#fittany-body .modal-backdrop.in {
+  opacity: 0.8; }
+
 #fittany-body .container, .row {
   margin-left: 0px;
   margin-right: 0px; }
