@@ -5,10 +5,10 @@ angular.module('fittanyUiApp')
         console.log("initializing notify component ...");
             $stateProvider
                 .state('notify', {
-                    url: '/',
+                    url: '/notify',
                     templateUrl: 'app/components/landing-page/notify.html',
-                    controller: 'NotifyController',
-                    controllerAs:'vm'
+            //        controller: 'NotifyController',
+                //    controllerAs:'vm'
 
                 });
 
