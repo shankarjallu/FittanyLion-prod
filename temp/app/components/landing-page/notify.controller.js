@@ -1,11 +1,13 @@
 (function() {
     angular.module('fittanyUiApp')
-        .controller('NotifyController',['$scope','$http','$state',
+        .controller('NotifyController',['$scope','$http','$state','DisclaimerService',
 
-            function($scope,$http,$state) {
+            function($scope,$http,$state,DisclaimerService) {
                 console.log("this is in notify");
 
-
+                $scope.open = function(){
+                    DisclaimerService.open();
+                }
 
                 $scope.loginNotify = function() {
 

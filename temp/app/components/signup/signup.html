@@ -29,7 +29,7 @@
 				</div>
 				<div class="form-group custom-form-group ">
 					
-					<input placeholder="Email Address*" type="email" class="form-control custom-input" id="email" name="email" ng-model="user.email" required>
+					<input placeholder="Email Address*" type="email" class="form-control custom-input" id="email" name="email" ng-model="user.email" email-validation required>
 					<span style="color:red" ng-show="(fittanySignupForm.email.$dirty && fittanySignupForm.email.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.email.$invalid)">
 						<span ng-show="fittanySignupForm.email.$error.required">This is a required field.</span>
 						<span ng-show="fittanySignupForm.email.$error.email">Invalid email address.</span>
@@ -39,7 +39,7 @@
 					<input placeholder="Password*" type="password" class="form-control custom-input" id="pwd" name="password" ng-model="user.password"  password-check ng-blur="checkPassword()" required>
 					<div style="color:red" ng-if="(fittanySignupForm.password.$dirty && fittanySignupForm.password.$invalid) || (fittanySignupForm.$submitted && fittanySignupForm.password.$invalid)">
 						<div ng-if="fittanySignupForm.password.$error.required">This is a required field.</div>
-						<div ng-if="fittanySignupForm.password.$error.passtest">
+						<div ng-if="fittanySignupForm.password.$error.passtest && !allValid">
 							<div>The password should contains at least:</div>
 							<div ng-if="!lcValid" style="">At least one lower case letter[a-z].</div>
 							<div ng-if="!ucValid">At least one upper case letter[A-Z].</div>
@@ -63,7 +63,8 @@
 						<span ng-if="fittanySignupForm.cpassword.$error.required">Please confirm the password.</span>
 					</span>
 					<span  style="color:red"  ng-if="(fittanySignupForm.cpassword.$error.pwmatch &&
-					 !fittanySignupForm.cpassword.$error.required 
+					 !fittanySignupForm.cpassword.$error.required &&
+					 !passChangeValid
 					 ) || !passChangeValid">
     					Passwords don't match.
   					</span>

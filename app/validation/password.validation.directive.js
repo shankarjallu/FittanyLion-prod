@@ -18,7 +18,11 @@
                             ctrl.$validators.pwmatch = function(model, view) {
                                 var firstpass = $(firstPassword).val();
                                 var value = model || view || "";
-                                scope.passChangeValid = true;
+                                if(value == firstpass){
+                                  scope.passChangeValid = true;  
+                                }else {
+                                    scope.passChangeValid = false;
+                                }
                                 return (value === firstpass);
                             };
                         });
@@ -52,6 +56,7 @@
                                 scope.numValid = false;
                                 scope.charValid  = false;
                                 scope.minlengthValid = false;
+                                scope.allValid = false;
                                 var value = model || view || "";
 
                                 if(lcregex.test(value)){
@@ -72,7 +77,16 @@
                                 //setting validotor to true only if every validation pass
                                 if(scope.lcValid && scope.ucValid && scope.numValid 
                                     && scope.charValid && scope.minlengthValid){  
-                                    scope.passChangeValid = true;                                 
+                                    scope.allValid = true;
+                                    var confirmPass = $(secondPassword).val();
+                                        if(confirmPass != value){
+                                            scope.passChangeValid = false; 
+                                            return false;
+                                        }else {
+                                            scope.passChangeValid = true;
+
+                                        }
+                                                                     
                                     return true;
                                 }
                                 return false;

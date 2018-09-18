@@ -357,6 +357,7 @@
   box-shadow: none;
   border-radius: 0;
   font-size: 20px;
+  padding-left: 20px;
   height: 55px;
   background-color: #d4cfcfdb;
   color: #000;
@@ -386,6 +387,7 @@ input.fittany_form_input::placeholder {
   font-size: 25px;
   font-weight: 300;
   text-align: center;
+  padding-left: 20px;
   height: 70px;
   background: transparent;
   color: #091d3c;

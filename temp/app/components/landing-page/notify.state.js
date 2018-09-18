@@ -7,8 +7,7 @@ angular.module('fittanyUiApp')
                 .state('notify', {
                     url: '/',
                     templateUrl: 'app/components/landing-page/notify.html',
-                    controller: 'NotifyController',
-                    controllerAs:'vm'
+                    controller: 'NotifyController'
 
                 });
 
